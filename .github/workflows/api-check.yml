@@ -1,0 +1,27 @@
+name: Secondly API Check
+
+on:
+  push:
+    paths:
+      - 'backend/api/**'
+      - '.github/workflows/api-check.yml'
+  pull_request:
+    paths:
+      - 'backend/api/**'
+      - '.github/workflows/api-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Check JavaScript syntax
+        run: node --check backend/api/src/server.js
+      - name: Validate package metadata
+        run: node -e "const p=require('./backend/api/package.json'); if(p.engines.node !== '>=24') process.exit(1)"
