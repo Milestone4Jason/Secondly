@@ -4,7 +4,15 @@
   "private": true,
   "description": "Secondly service API starter",
   "type": "module",
-  "scripts": {"start": "node src/server.js", "dev": "node --watch src/server.js"},
-  "engines": {"node": ">=24"},
-  "dependencies": {"express": "^5.1.0"}
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
