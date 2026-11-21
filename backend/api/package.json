@@ -1,0 +1,10 @@
+{
+  "name": "secondly-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Secondly service API starter",
+  "type": "module",
+  "scripts": {"start": "node src/server.js", "dev": "node --watch src/server.js"},
+  "engines": {"node": ">=24"},
+  "dependencies": {"express": "^5.1.0"}
+}
