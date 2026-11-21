@@ -22,6 +22,12 @@ jobs:
         with:
           node-version: 24
       - name: Check JavaScript syntax
-        run: node --check backend/api/src/server.js
+        run: |
+          node --check backend/api/src/server.js
+          node --check backend/api/src/providers/esim-access.js
+          node --check backend/api/src/providers/esim-access.test.js
+      - name: Run API tests
+        working-directory: backend/api
+        run: npm test
       - name: Validate package metadata
         run: node -e "const p=require('./backend/api/package.json'); if(p.engines.node !== '>=24') process.exit(1)"
