@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Secondly",
+    "slug": "secondly",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#080D18"
+    },
+    "android": {
+      "package": "com.secondly.mobile",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#080D18"
+      }
+    }
+  }
+}
