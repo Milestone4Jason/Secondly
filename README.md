@@ -21,6 +21,7 @@ These are product goals, not currently active telecom services. Real numbers, mo
 
 - `docs/` — product and technical planning
 - `backend/api/` — initial API service
+- `mobile/` — Expo / React Native Android app prototype
 - `.github/workflows/` — automated checks
 
 ## Development
